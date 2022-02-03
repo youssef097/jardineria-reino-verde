@@ -54,5 +54,5 @@ app.set("view engine", "ejs")
 //LNFaNb0O@RzF
 
 app.listen(app.get("port"), () => {
-    console.log("Hello");
+    console.log("Starting app at port:"+app.get("port"));
 })
