@@ -1,0 +1,32 @@
+<%- include("../partials/header.ejs") -%>
+
+    <section class="container m-auto ">
+        <h2 class="mt-12 mb-8 ml-3 font-bold text-2xl" id="titulo"></h2>
+        <div
+            class="grid px-8 md:p-0  grid-flow-col grid-cols-1 gap-y-4 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 md:gap-x-16 md:gap-8 ">
+            <p id="description">
+
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        
+        async function loadServicios() {
+            const response = await fetch('/api/servicios/<%= servicio %>');
+            const servicios = await response.json();
+            console.log(servicios);
+            document.querySelector("#titulo").innerHTML = servicios.data.nombre;
+            document.querySelector("#description").innerHTML = servicios.data.descripcion;
+
+            // logs [{ name: 'Joker'}, { name: 'Batman' }]
+        }
+        loadServicios();
+
+    </script>
+
+    <%- include("../partials/footer.ejs") -%>

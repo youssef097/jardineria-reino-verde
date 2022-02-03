@@ -2,6 +2,7 @@
 const express = require("express")
 const nodemailer = require('nodemailer');
 const app = express();
+const datosServicios = require("./datosServicios.js");
 
 
 app.set("port", process.env.PORT || 3000)
@@ -12,6 +13,17 @@ app.use(express.urlencoded({extended:false}))
 app.get("/", (req, res) => {
     res.render("pages/index")
 })
+
+app.get("/servicios/:servicio", (req, res) => {
+    res.render("pages/servicio",{servicio:req.params.servicio, datos:{}})
+})
+
+
+app.get("/api/servicios/:servicio", (req, res) => {
+    res.json({data:datosServicios[req.params.servicio]})
+})
+
+
 app.post("/send-email", (req, res) => {
     console.log(req.body);
     // Definimos el transporter
