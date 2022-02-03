@@ -1,0 +1,47 @@
+<footer class=" mt-12">
+    <div class="w-full h-20 " style="background-image:url(/img/grass3.png);"> </div>
+    <div class="h-36 bg-gray-800">
+
+        <div class="conainer">
+
+        </div>
+    </div>
+</footer>
+
+<script>
+    const button = document.querySelector("#hamburguer-button")
+    const antes = document.querySelector("#img-antes")
+    const despues = document.querySelector("#img-despues")
+
+
+    let cont = 1;
+
+    setInterval(() => {
+       antes.style.backgroundImage = "url(img/antes"+cont+".jpg)" 
+       antes.style.backgroundImage = "url(img/despues"+ cont +".jpg)" 
+    }, 3000);
+
+    button.addEventListener("click", () => {
+        document.querySelector(".mobile-menu").classList.toggle("hidden")
+    })
+
+    // window.scroll({
+    //     top: 2500,
+    //     left: 0,
+    //     behavior: 'smooth'
+    // });
+
+                    
+
+    // // Scroll certain amounts from current position 
+    // window.scrollBy({
+    //     top: 100, // could be negative value
+    //     left: 0,
+    //     behavior: 'smooth'
+    // });
+
+
+</script>
+</body>
+
+</html>
