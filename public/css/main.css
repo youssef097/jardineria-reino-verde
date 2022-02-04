@@ -559,6 +559,21 @@ video {
   width: 100%;
 }
 
+.menu-content{
+  width:200px;
+  height:80px;
+  position:fixed;
+  bottom:0px;
+  left:90%;
+}
+
+.menu-item{
+  width:60px;
+  height:60px;
+  display: flex;
+  cursor:pointer;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;

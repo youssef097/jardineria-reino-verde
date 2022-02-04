@@ -1,28 +1,27 @@
-module.exports = {
-
+module.exports = { 
     poda:{
         nombre:"Servicio de poda",
-        imagenes:["iasds.png"],
+        img:["iasds.png"],
         descripcion:"Servicio de Poda",
         videos:[]
     },
 
     limpieza:{
         nombre:"Limpieza",
-        imagenes:[],
+        img:[],
         descripcion:"Servicio de Limpieza"
     },
     
-    asdsad:{
-        nombre:"Servicio de poda",
-        imagenes:["iasds.png"],
-        descripcion:"Servicio de Poda",
+    desbrozar:{
+        nombre:"Desbrozado",
+        img:["card1.jpg"],
+        descripcion:"Servicio de desbrozado",
         videos:[]
     },
 
     limpieasdza:{
         nombre:"Limpieza",
-        imagenes:[],
+        img:[],
         descripcion:"Servicio de Limpieza"
     }
 
