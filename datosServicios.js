@@ -1,29 +1,46 @@
-module.exports = { 
-    poda:{
+module.exports =[
+    {
+        id: 1,
         nombre:"Servicio de poda",
-        img:["iasds.png"],
-        descripcion:"Servicio de Poda",
+        img:"/img/card1.jpg",
+        descripcion:"Servicio de Poda descripcion asdafdsfasdfasdfafa",
         videos:[]
     },
 
-    limpieza:{
+   {
+       id:2,
         nombre:"Limpieza",
-        img:[],
-        descripcion:"Servicio de Limpieza"
+        img:"/img/card3.jpg",
+        descripcion:"Servicio de Limpieza descripcion asdafdsfasdfasdfafa"
     },
     
-    desbrozar:{
+    {
+        id:3,
         nombre:"Desbrozado",
-        img:["card1.jpg"],
-        descripcion:"Servicio de desbrozado",
+        img:"/img/card2.jpg",
+        descripcion:"Servicio de desbrozado descripcion asdafdsfasdfasdfafa",
         videos:[]
     },
 
-    limpieasdza:{
-        nombre:"Limpieza",
-        img:[],
-        descripcion:"Servicio de Limpieza"
+   {
+       id:4,
+        nombre:"Pesca",
+        img:"/img/card4.jpg",
+        descripcion:"Servicio de Limpieza descripcion asdafdsfasdfasdfafa"
+    },
+    {
+        id:5,
+        nombre:"piscinas",
+        img:"/img/card5.jpg",
+        descripcion:"Servicio de desbrozado descripcion asdafdsfasdfasdfafa",
+        videos:[]
+    },
+
+   {
+       id:6,
+        nombre:"Jardines",
+        img:"/img/card6.jpg",
+        descripcion:"Servicio de Limpieza descripcion asdafdsfasdfasdfafa"
     }
 
-
-}
+]

@@ -1,30 +1,31 @@
 <%- include("../partials/header.ejs") -%>
 
-    <section class="container m-auto ">
-        <h2 class="mt-12 mb-8 ml-3 font-bold text-2xl" id="titulo"></h2>
-        <div
-            class="grid px-8 md:p-0  grid-flow-col grid-cols-1 gap-y-4 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 md:gap-x-16 md:gap-8 ">
-            <p id="description">
-                  
-
-            </p>
-            <img id="imagen"  alt="" width="500" height="600"> 
+    <div id="service-card">
+        <div id="card" class="card mb-3" style="max-width: 800px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img id="imagen" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title" id="card-titulo"></h5>
+                        <p id="description" class="card-text"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    </section>
+    </div>
 
     <script>
 
-        
-        async function loadServicios() {
-            const response = await fetch('/api/servicios/<%= servicio %>');
-            const servicios = await response.json();
-            console.log(servicios);
-            document.querySelector("#titulo").innerHTML = servicios.data.nombre;
-            document.querySelector("#description").innerHTML = servicios.data.descripcion;
-            document.querySelector("#imagen").innerHTML = servicios.data.img;
 
-            // logs [{ name: 'Joker'}, { name: 'Batman' }]
+        async function loadServicios() {
+            const queryString = window.location.search;
+            console.log('/api/servicios/<%= servicio.id %>');
+            document.querySelector("#card-titulo").innerHTML = "<%= servicio.nombre %>";
+            document.querySelector("#description").innerHTML = "<%= servicio.descripcion %>";
+            document.querySelector("#imagen").src = "<%= servicio.img %>";
+
         }
         loadServicios();
 

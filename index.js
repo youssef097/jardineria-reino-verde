@@ -3,6 +3,8 @@ const express = require("express")
 const nodemailer = require('nodemailer');
 const app = express();
 const datosServicios = require("./datosServicios.js");
+const servicios= require("./src/servicios/servicios.js");
+const slider = require("/jardineria/jardineria-reino-verde/slider")
 
 
 app.set("port", process.env.PORT || 3000)
@@ -11,11 +13,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}))
 
 app.get("/", (req, res) => {
-    res.render("pages/index")
+    res.render("pages/index",{datosServicios})
 })
 
 app.get("/servicios/:servicio", (req, res) => {
-    res.render("pages/servicio",{servicio:req.params.servicio, datos:{}})
+    const datos=servicios.getServiciosById(req.params.servicio)[0]
+    console.log(datos);
+    res.render("pages/servicio",{servicio:datos})
 })
 
 
