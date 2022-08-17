@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 const datosServicios = require("./datosServicios.js");
 const servicios= require("./src/servicios/servicios.js");
-const slider = require("/jardineria/jardineria-reino-verde/slider")
+
 
 
 app.set("port", process.env.PORT || 3000)

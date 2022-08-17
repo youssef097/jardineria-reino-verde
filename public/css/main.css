@@ -47,7 +47,7 @@ Remove the margin in all browsers.
 */
 
 body {
-  margin: 0;
+  margin: auto;
 }
 
 /**
@@ -187765,11 +187765,19 @@ video {
   }
   .cabeceraWater{
   position: absolute;
-  top: 20% ;
+  top: 15% ;
   margin-top: 30px;
-  left:25%;
+  left:33%;
   margin-left: -225px;
+  text-shadow: -2px 2px 4px 
+            rgba(0, 0, 0, 0.5), 
+            2px -2px 0 
+            rgba(255, 255, 255, 0.9);
+    }
   }
+
+  
+
   .carousel-item {
     transition: transform 2.6s ease-in-out;
   }
@@ -187907,13 +187915,13 @@ video {
   }
   .slider{
     display: flex;
-    width:400%;
-    height:400px;
+    width:900%;
+    height:600px;
     /* margin-left: -100%; */
   }
 
   .slider__section{
-    width:80%;
+    width:100%;
   }
 
   .slider__img{
@@ -187924,14 +187932,13 @@ video {
   }
   .slider__btn{
     position:absolute;
-    width:40px;
-    height:40px;
+    width:45px;
+    height:45px;
     background: rgba(220,255,255,0.7);
     top:50%;
     transform:translateY(-50%);
     font-size:30px;
     font-weight:bold;
-    font-family: monospace;
     text-align:center;
     border-radius:50%;
     cursor:pointer;
@@ -187946,6 +187953,5 @@ video {
   .slider__btn--right{
     right:10px;
   }
-
 
 }
